@@ -4,7 +4,7 @@ const config = {
       return "1.0.0";
    },
    get host() {
-      return "http://v.juhe.cn";
+      return "https://v.juhe.cn";
    },
    get juheKey() {
       // juhe.cn的key

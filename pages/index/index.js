@@ -19,7 +19,7 @@ Page(A.assignPage({
       wx.getLocation({
          type: 'wgs84',
          success: res => {
-            A.updata.getWeatherDetail(res.latitude, res.longitude).then(data => {
+            A.updata.getWeatherDetail(res.longitude, res.latitude).then(data => {
                this.setData({ weather: data });
             }, err => {
                let er = { today: { date_y: "获取当前位置失败" } };

@@ -1,18 +1,35 @@
 <!--pages/index/weather.wxml-->
-<view class="weather">
-   <view class="h3">
-      {{weather.today.city}} {{weather.today.date_y}}
-   </view>
-   <view class="h3">
-      {{weather.today.temperature}}
-   </view>
-   <view class="h3">
-      当前气温：{{weather.sk.temp}}
-   </view>
-   <view class="weui-cells__title">未来一周天气</view>
-   <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell"  wx:for="{{weather.future}}" wx:key="index" >
-         <view class="weui-cell__bd">{{item.date}} <text class='tcr_o7'>{{item.temperature}}</text>  {{item.weather}}</view>
+<view class="weui-panel weui-panel_access wc-panel">
+   <form bindsubmit="formSubmit">
+      <view class="wc-search-bar weui-flex">
+         <view class="weui-search-bar weui-flex__item">
+            <view class="weui-search-bar__form">
+               <view class="weui-search-bar__box">
+                  <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                  <input bindblur="blurInput" type="text" bindfocus="focusInput" name="cname" class="weui-search-bar__input" placeholder="城市名称" value="{{name}}" bindconfirm="submitData" />
+               </view>
+
+            </view>
+            <button form-type="submit" class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}">搜索</button>
+         </view>
+      </view>
+   </form>
+   <view class="weather">
+      <view class="h3">
+         {{weather.today.city}} {{weather.today.date_y}}
+      </view>
+      <view class="h3">
+         {{weather.today.temperature}}
+      </view>
+      <view class="h3">
+         当前气温：{{weather.sk.temp}}
+      </view>
+      <view class="weui-cells__title">未来一周天气</view>
+      <view class="weui-cells weui-cells_after-title">
+         <view class="weui-cell" wx:for="{{weather.future}}" wx:key="index">
+            <view class="weui-cell__bd">{{item.date}}
+               <text class='tcr_o7'>{{item.temperature}}</text> {{item.weather}}</view>
+         </view>
       </view>
    </view>
 </view>
