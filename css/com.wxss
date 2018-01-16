@@ -1,0 +1,75 @@
+.weui-cells {
+   color: #607d8b;
+   font-size: 14px;
+}
+
+.h1 {
+   font-size: 26px;
+   line-height: 1.6;
+}
+
+.h2 {
+   font-size: 22px;
+   line-height: 1.6;
+}
+
+.h3 {
+   font-size: 18px;
+   line-height: 1.6;
+}
+
+.h4 {
+   font-size: 16px;
+   line-height: 1.6;
+}
+
+.h5 {
+   font-size: 14px;
+   line-height: 1.6;
+}
+
+.txt12 {
+   font-size: 12px;
+   line-height: 1.6;
+}
+
+.txt14 {
+   font-size: 14px;
+   line-height: 1.6;
+}
+.title_right{
+   text-align: right;
+}
+.space-w10, .space-h10, .space-w30, .space-h30, .space-h60, .space-w60,
+.space-h120, .space-w120 {
+   display: inline-block;
+   width: 10px;
+}
+
+.space-h10 {
+   height: 10px;
+}
+
+.space-w30 {
+   width: 30px;
+}
+
+.space-h30 {
+   height: 30px;
+}
+
+.space-w60 {
+   width: 60px;
+}
+
+.space-h60 {
+   height: 60px;
+}
+
+.space-w120 {
+   width: 120px;
+}
+
+.space-h120 {
+   height: 120px;
+}

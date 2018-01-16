@@ -1,0 +1,18 @@
+<!--pages/index/weather.wxml-->
+<view class="weather">
+   <view class="h3">
+      {{weather.today.city}} {{weather.today.date_y}}
+   </view>
+   <view class="h3">
+      {{weather.today.temperature}}
+   </view>
+   <view class="h3">
+      当前气温：{{weather.sk.temp}}
+   </view>
+   <view class="weui-cells__title">未来一周天气</view>
+   <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell"  wx:for="{{weather.future}}" wx:key="index" >
+         <view class="weui-cell__bd">{{item.date}} <text class='tcr_o7'>{{item.temperature}}</text>  {{item.weather}}</view>
+      </view>
+   </view>
+</view>

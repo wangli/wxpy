@@ -1,0 +1,23 @@
+/**app.wxss**/
+@import "css/weui.wxss";
+@import "css/icon.wxss";
+@import "css/line.wxss";
+@import "css/color.wxss";
+@import "css/com.wxss";
+/*默认page样式  */
+page {
+   background-color: #f8f8f8;
+   display: block;
+   box-sizing: border-box;
+}
+/*默认view样式  */
+view {
+   box-sizing: border-box;
+}
+/*默认container样式，每个页面都根节点  */
+.container {
+   width: 100%;
+   height: auto;
+   display: block;
+   box-sizing: border-box;
+}

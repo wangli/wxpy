@@ -1,0 +1,14 @@
+{
+   "pages": [
+      "pages/index/index",
+      "pages/login/login",
+      "pages/index/weather"
+   ],
+   "window": {
+      "navigationBarTitleText": "wxp",
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#39b0ec",
+      "backgroundColor": "#F8F8F8",
+      "navigationBarTextStyle": "white"
+   }
+}
