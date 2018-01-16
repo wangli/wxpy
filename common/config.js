@@ -7,6 +7,7 @@ const config = {
       return "http://v.juhe.cn";
    },
    get juheKey() {
+      // juhe.cn的key
       return "79d43fad867513f606f81a506f71d7d4";
    },
    // 全局默认页面地址
