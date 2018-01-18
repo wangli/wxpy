@@ -27,6 +27,7 @@ Page(A.assignPage({
          this.setData({ weather: res })
          wx.hideLoading()
       }, err => {
+         A.S.T({title:"获取数据失败"});
          wx.hideLoading()
       });
    }

@@ -48,7 +48,7 @@ Page(A.assignPage({
       console.log(_kword);
       if (this.trim(_kword) != "") {
          let data = this.data.citys.filter(val => {
-            return val.province == _kword;
+            return val.province == _kword || val.city == _kword || val.district == _kword;
          });
          console.log(data);
          this.setData({ items: data });
