@@ -5,7 +5,7 @@
       "pages/index/weather"
    ],
    "window": {
-      "navigationBarTitleText": "wxp",
+      "navigationBarTitleText": "天气预报",
       "backgroundTextStyle": "light",
       "navigationBarBackgroundColor": "#39b0ec",
       "backgroundColor": "#F8F8F8",

@@ -18,7 +18,6 @@ Page(A.assignPage({
       this.getProject(e.detail.value.cname);
       this.setData({ inputShowed: false });
    },
-   // 提交数据 
    submitData(e) {
       this.getProject(e.detail.value);
    },

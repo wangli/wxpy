@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.9.1",
 	"appid": "wxff8fce9d6189db1b",
-	"projectname": "wxpy",
+	"projectname": "天气预报",
 	"condition": {
 		"search": {
 			"current": -1,

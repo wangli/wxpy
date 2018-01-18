@@ -3,7 +3,10 @@
 const A = getApp();
 Page(A.assignPage({
    data: {
+      inputShowed: false,
       citys: [],
+      items: [],
+      kword: "",
       weather: { today: { date_y: "..." } }
    },
    onLoad: function (options) {
@@ -11,7 +14,7 @@ Page(A.assignPage({
          title: '加载中',
       });
       A.updata.getPCategory().then(res => {
-         this.setData({ citys: res });
+         this.setData({ citys: res, items: res });
          wx.hideLoading()
       }, err => {
          wx.hideLoading()
@@ -27,5 +30,33 @@ Page(A.assignPage({
             })
          }
       })
+   },
+   focusInput: function (e) {
+      this.setData({ inputShowed: true });
+   },
+   blurInput: function (e) {
+      this.setData({ inputShowed: false });
+   },
+   formSubmit: function (e) {
+      this.filter(e.detail.value.kword);
+      this.setData({ inputShowed: false });
+   },
+   submitData(e) {
+      this.filter(e.detail.value);
+   },
+   filter: function (_kword) {
+      console.log(_kword);
+      if (this.trim(_kword) != "") {
+         let data = this.data.citys.filter(val => {
+            return val.province == _kword;
+         });
+         console.log(data);
+         this.setData({ items: data });
+      } else {
+         this.setData({ items: this.data.citys });
+      }
+   },
+   trim: function (s) {
+      return s.replace(/(^\s*)|(\s*$)/g, "");
    }
 }));
