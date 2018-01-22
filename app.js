@@ -21,7 +21,7 @@ const _app = {
       //授权初始化
    },
    onShow: function () {
-      
+      review.init("/weather/citys");
       // 监听网络情况
       wx.onNetworkStatusChange((res) => {
          if (!res.isConnected) {

@@ -15,7 +15,8 @@ Page(A.assignPage({
       });
       A.updata.getPCategory().then(res => {
          this.setData({ citys: res, items: res });
-         wx.hideLoading()
+         // 两千多行数据渲染有点满，loading延迟关闭
+         setTimeout(() => { wx.hideLoading() }, 1500);
       }, err => {
          wx.hideLoading()
       });
