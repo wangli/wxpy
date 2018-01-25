@@ -3,7 +3,8 @@ const A = getApp();
 Page(A.assignPage({
    data: {
       inputShowed: false,
-      weather: {}
+      weather: {},
+      nodes:''
    },
    onLoad: function (options) {
       this.getProject(options.cname);
@@ -27,8 +28,14 @@ Page(A.assignPage({
          this.setData({ weather: res })
          wx.hideLoading()
       }, err => {
-         A.S.T({title:"获取数据失败"});
+         A.S.T({ title: "获取数据失败" });
          wx.hideLoading()
+      });
+   },
+   tap: function (e) {
+      this.setData({
+         x: 30,
+         y: 30
       });
    }
 }));
