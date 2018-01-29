@@ -32,6 +32,9 @@ Page(A.assignPage({
          }
       })
    },
+   onShareAppMessage:function(res){
+      
+   },
    focusInput: function (e) {
       this.setData({ inputShowed: true });
    },

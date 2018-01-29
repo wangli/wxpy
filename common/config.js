@@ -1,7 +1,7 @@
 
 const config = {
    get v() {
-      return "1.0.0";
+      return "0.1.4";
    },
    get host() {
       return "https://v.juhe.cn";
