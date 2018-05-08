@@ -1,5 +1,4 @@
  # wxpy
- -----
 - [wxpy 开始&安装](url)
 - [框架说明](url)
 - [app说明](url)
@@ -29,3 +28,6 @@
  - [page.goBack()](url) 页面后退
  - [page.goBackR()](url) 页面后台并重新读取
  - [page.wToast()](url) 界面交互提示说明(同等于A.S.toast)
+
+- A.BD
+ 本地数据存储对象
