@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<compage id="compage">
+  <view class="container">
+    <view class="wordlist">
+      <view bindtap='toast' class="hi-word" wx:for="{{items}}" data-word="{{item.word}}" wx:key="index">{{item.word}}</view>
+    </view>
+    <view bindtap='goPage' data-upage="../index" class='newBtn'>
+      <icon class='ssc-icon-plus'></icon>
+    </view>
+  </view>
+</compage>

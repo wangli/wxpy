@@ -1,0 +1,9 @@
+<!--pages/index.wxml-->
+<compage id="compage">
+  <view class="container">
+    <view class="goBtn" bindtap="goPage" data-upage="/pages/teacher/teacher">
+      <view class="icon-circle"></view>
+      <view>enter</view>
+    </view>
+  </view>
+</compage>

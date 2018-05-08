@@ -1,4 +1,4 @@
-const config = require('config.js');
+const config = require('../config/config.js');
 //权限申请处理
 const authorize = function (_arr) {
    let arr = _arr || [];

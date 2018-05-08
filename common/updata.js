@@ -1,6 +1,6 @@
 // 服务器通信业务
 const SMP = require('simple');
-const config = require('config');
+const config = require('../config/config');
 const Review = require('review.js');
 const DB = require('../udb/DB.js');
 module.exports = {
@@ -10,9 +10,9 @@ module.exports = {
          let _object = {
             url: _url,
             method: "GET",
-            data: { key: config.juheKey },
+            data: { },
             success: res => {
-               if (res.data.error_code == 0) {
+              if (res.data.errcode == 0) {
                   if (typeof (_object.data["page_index"]) == "undefined") {
                      resolve(res.data.result);
                   } else {
@@ -55,11 +55,11 @@ module.exports = {
    },
    //城市列表
    getPCategory() {
-      return this.getTDataStorage('/weather/citys');
+     return this.getTDataStorage('/cf');
    },
    // 城市天气
-   getChannelDetail(_cityname) {
-      return this.getTData({ url: '/weather/index', data: { cityname: _cityname } });
+   getCf() {
+     return this.getTData({ url: '/cf'});
    },
    // 城市天气根据定位
    getWeatherDetail(lon, lat) {

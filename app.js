@@ -2,7 +2,7 @@
 // 本地存储数据
 const DB = require('/udb/DB.js');
 // APP常用配置
-const config = require('/common/config.js');
+const config = require('/config/config.js');
 // 网络数据通信
 const updata = require('/common/updata.js');
 // 页面更新方法处理
@@ -13,10 +13,13 @@ const _smp = require('/common/simple.js');
 const _ass = require('/common/assign.js');
 // APP授权处理
 const _aoz = require('/common/authorize.js');
+
 // 初始化APP参数
 const _app = {
    // 存储全局数据变量
-   GData: {},
+   GD: {
+     ts:"99"
+   },
    onLaunch: function () {
       //授权初始化
    },

@@ -1,14 +1,13 @@
 {
-   "pages": [
-      "pages/index/index",
-      "pages/login/login",
-      "pages/index/weather"
-   ],
-   "window": {
-      "navigationBarTitleText": "天气预报",
-      "backgroundTextStyle": "light",
-      "navigationBarBackgroundColor": "#39b0ec",
-      "backgroundColor": "#F8F8F8",
-      "navigationBarTextStyle": "white"
-   }
+  "pages": [
+    "pages/index",
+    "pages/teacher/teacher"
+  ],
+  "window": {
+    "navigationBarTitleText": "hien",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#555555",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "white"
+  }
 }

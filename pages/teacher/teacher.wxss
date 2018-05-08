@@ -1,0 +1,31 @@
+/**index.wxss**/
+
+.wordlist {
+   margin: 8px;
+}
+
+.hi-word {
+   display: inline-block;
+   padding: 3px 8px;
+   line-height: 1.6;
+   font-size: 14px;
+   margin: 8px;
+   position: relative;
+   color: #555555;
+}
+.hi-word:active{
+   border-radius: 2px;
+   background-color: #f1fff0;
+}
+.hi-word:after {
+   content: "";
+   position: absolute;
+   top:-50%;
+   left: -50%;
+   width: 200%;
+   height: 200%;
+   border: 1px solid #DDDDDD;
+   border-radius: 4px;
+   -webkit-transform: scale(0.5);
+   transform: scale(0.5);
+}
