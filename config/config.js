@@ -4,7 +4,7 @@ const config = {
     return "0.1.4";
   },
   get host() {
-    return "http://192.168.1.244";
+     return "http://wxpy.yangwl.com";
   },
   get juheKey() {
     // juhe.cn的key

@@ -3,36 +3,10 @@ const SMP = require('simple');
 const config = require('../config/config');
 const Review = require('review.js');
 const DB = require('../udb/DB.js');
+const webservice = require('../service/webservice.js')
 module.exports = {
    //get数据基础列表
-   getTData(_url) {
-      return new Promise(function (resolve, reject) {
-         let _object = {
-            url: _url,
-            method: "GET",
-            data: { },
-            success: res => {
-              if (res.data.errcode == 0) {
-                  if (typeof (_object.data["page_index"]) == "undefined") {
-                     resolve(res.data.result);
-                  } else {
-                     resolve(res.data);
-                  }
-               } else {
-                  reject(res.data);
-               }
-            },
-            fail: r => {
-               reject(r);
-            }
-         };
-         if (typeof (_url) == "object") {
-            if (_url['data']) _url['data'] = Object.assign(_object.data, _url['data']);
-            Object.assign(_object, _url);
-         }
-         SMP.R(_object);
-      });
-   },
+   getTData: SMP.RS,
    // 获取需要本地存储的get数据
    getTDataStorage(_url) {
       return new Promise((resolve, reject) => {
@@ -53,16 +27,15 @@ module.exports = {
          }
       })
    },
-   //城市列表
-   getPCategory() {
-     return this.getTDataStorage('/cf');
+   // post提交数据
+   postTData(_obj) {
+      if (typeof _obj['url'] != "undefined" && typeof _obj['data'] != "undefined") {
+         return SMP.RS({ data: _obj['data'], url: _obj['url'], method: 'POST' });
+      } else {
+         return new Promise((resolve, reject) => {
+            reject("error data");
+         })
+      }
    },
-   // 城市天气
-   getCf() {
-     return this.getTData({ url: '/cf'});
-   },
-   // 城市天气根据定位
-   getWeatherDetail(lon, lat) {
-      return this.getTData({ url: '/weather/geo', data: { lon: lon, lat: lat } });
-   }
+   ...webservice
 }
